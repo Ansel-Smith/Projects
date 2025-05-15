@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Cost of Education</title>
+    <link rel="stylesheet" href="poster.css">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    <!-- Based on a poster template from https://github.com/cpitclaudel/academic-poster-template -->
+
+          <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+          <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+  html { font-size: 1.15rem }
+</style>
+  </head>
+
+  <body vocab="http://schema.org/" typeof="ScholarlyArticle">
+    <header role="banner">
+      <aside>
+          <!--<a href="https://github.com/cpitclaudel/academic-poster-template"><img src="logo.svg" alt="Tutorial logo"></a>-->
+      </aside>
+      <div>
+        <h1 property="headline">The Cost of Education</h1>
+                  <h2 property="alternativeHeadline">A Summary of Financial Transactions of Enslavement at the University of Alabama</h2>
+                <address>
+              <a property="author">Ansel Smith<sup>a</sup></a>
+<br />  <sup>a</sup><a property="sourceOrganization">The University of Alabama</a>
+        </address>
+        <span class="publication-info">
+                      <span property="publisher">Unpublished</span>,
+            <time pubdate property="datePublished" datetime="2020-09-08">September 8, 2020</time>
+                  </span>
+      </div>
+    </header>
+
+    <main property="articleBody">
+        <article property="abstract">
+        <header><h3>Abstract</h3></header>
+
+    <p>A study of the history of enslavement at the University of Alabama offers critical insight into the social and financial implications of enslavement in Alabama and its broader legacy in higher education in the United States.</p>
+
+    <p>The purpose of this project was to digitize financial transactions dating between 1828 and 1864 and develop descriptive statistics as a baseline for future historical inquiry.</p>
+
+    <p>Data was collected from the Boole Special Collections of the University of Alabama between August and November of 2024. Transactions were parsed and organized into a tidy dataset and key financial trends and relationships between social agents were visualized with the R Tidyverse.</p>
+
+    <p>Among the 239 unique instances analyzed, a total of $535,135.43, adjusted for inflation, not accounting for overlap, was found to be spent by the university for the purchase, hire, and board of enslaved individuals. With this baseline investigation, future statistical and social network analysis is possible to answer deeper questions about the university's history of enslavement and its contemporary financial impact.</p>
+  </article>
+
+  <article>
+    <header><h3>Methods</h3></header>
+    <ul>
+      <li>Sourced documents from Hoole Special Collections and Digital Collections</li>
+      <li>Digitized and sorted documents into tidy dataset with Excel and R Tidyverse</li>
+      <li>Created plots and tables in R Plotly and GTables</li>
+      <li>Used Gephi to conduct social network analysis</li>
+      <li>Adjusted financial amounts for inflation using CPI estimates from Federal Reserve Bank of Minneapolis</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><h3>Plots</h3></header>
+    <figure>
+    <div class="slider visuals plots">
+            
+      <a href="#slide-1">1</a>
+      <a href="#slide-2">2</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-4">4</a>
+      <a href="#slide-5">5</a>
+  
+      <div class="slides">
+      <div id="slide-1">
+          <iframe id="amount_duration_plot"
+          title="Amount Duration Plot"
+          width="500"
+          height="300"
+          src="./plots/amount_duration_plot.html">
+          </iframe>
+      </div>
+      <div id="slide-2">
+          <iframe id="duration_year_plot"
+          title="Duration Year Plot"
+          width="500"
+          height="300"
+          src="./plots/duration_year_plot.html">
+          </iframe>
+      </div>
+      <div id="slide-3">
+          <iframe id="enslaved_year_plot"
+          title="Enslaved Year Plot"
+          width="500"
+          height="300"
+          src="./plots/enslaved_year_plot.html">
+          </iframe>
+      </div>
+      <div id="slide-4">
+          <iframe id="payee_duration_plot"
+          title="Payee Duration Plot"
+          width="500"
+          height="300"
+          src="./plots/payee_duration_plot.html">
+          </iframe>
+      </div>
+      <div id="slide-5">
+          <iframe id="year_payee_plot"
+          title="Year Payee Plot"
+          width="500"
+          height="300"
+          src="./plots/year_payee_plot.html">
+          </iframe>
+      </div>
+      </div>
+      <figcaption>Figure 1. Plots considering enslaved individuals, enslavers, duration of labor, and cost of labor over time</figcaption>
+  </div>
+  </figure>
+  </article>
+
+
+  <article>
+    <header><h3>Results</h3></header>
+      <ul>
+        <li>$535,135.43 spent by affiliates of the University of Alabama, adjusted for inflation, not accounting for overlap</li>
+        <li>Potentially 20 new enslaved people discovered</li>
+        <li>'NA' indicates missing information</li>
+        <li>Tables include mean (M), standard deviation (SD), Max, Min, Sum, Mode, as applicable</li>
+        <li>13 documents at Hoole were not found in the digital collections</li>
+        </ul>
+  </article>
+
+  <article>
+    <header><h3>Social Network Analysis</h3></header>
+    <!--<figure>-->
+      <img src="./pics/graph_4.png">      
+    <!--</figure>-->
+      <figcaption>Figure 2. Image of social network of enslavers, enslaved individuals, certifiers of payments, and recipients of payments</figcaption>
+    </article>
+
+  <article>
+    <header><h3>Tables</h3></header>
+    <figure>
+      <div class="slider visuals tables">
+            
+        <a href="#slide-1-b">1</a>
+        <a href="#slide-2-b">2</a>
+        <a href="#slide-3-b">3</a>
+        <a href="#slide-4-b">4</a>
+        <a href="#slide-5-b">5</a>
+        <a href="#slide-6-b">6</a>
+        <a href="#slide-7-b">7</a>
+        <a href="#slide-8-b">8</a>
+    
+        <div class="slides">
+        <div id="slide-1-b">
+            <iframe id="grand_summary_table"
+            title="Grand Summary Table"
+            width="500"
+            height="300"
+            src="./tables/grand_summary_table.html">
+            </iframe>
+        </div>
+        <div id="slide-2-b">
+            <iframe id="amount_year_table"
+            title="Amount Year Table"
+            width="500"
+            height="300"
+            src="./tables/amount_year_table.html">
+            </iframe>
+        </div>
+        <div id="slide-3-b">
+            <iframe id="enslaved_amount_table"
+            title="Enslaved Amount Plot"
+            width="500"
+            height="300"
+            src="./tables/enslaved_amount_table.html">
+            </iframe>
+        </div>
+        <div id="slide-4-b">
+            <iframe id="receivedof_amount_table"
+            title="Received Of Amount Table"
+            width="500"
+            height="300"
+            src="./tables/receivedof_amount_table.html">
+            </iframe>
+        </div>
+        <div id="slide-5-b">
+            <iframe id="enslaved_duration_table"
+            title="Enslaved Duration Table"
+            width="500"
+            height="300"
+            src="./tables/enslaved_duration_table.html">
+            </iframe>
+        </div>
+        <div id="slide-6-b">
+            <iframe id="amount_year_table"
+            title="Amount Year Table"
+            width="500"
+            height="300"
+            src="./tables/amount_year_table.html">
+            </iframe>
+        </div>
+        <div id="slide-7-b">
+            <iframe id="certifier_amount_table"
+            title="Certifier Amount Table"
+            width="500"
+            height="300"
+            src="./tables/certifier_amount_table.html">
+            </iframe>
+        </div>
+        <div id="slide-8-b">
+            <iframe id="payee_amount_table"
+            title="Payee Amount Table"
+            width="500"
+            height="300"
+            src="./tables/payee_amount_table.html">
+            </iframe>
+        </div>
+        </div>
+        <figcaption>Table 1. Tables of all datapoints and data categories aggregated by day, month, and year</figcaption>
+    </div>
+  </figure>
+ </article>
+
+  <article>
+    <header><h3>Documents</h3></header>
+    <!--<figure>-->
+      <img src="./pics/document.jpg">
+    <!--</figure>-->
+    <p><i>Figure 3. Photograph of a financial transcript located at Hoole Special Collections (1)</i></p>  		
+    </article>
+
+    <article>
+      <header><h3>Conclusion and Recommendations</h3></header>
+       <ul>
+        <li>Refining and expansion of dataset </li>
+        <li>Transforming social network and financial analysis into accessible and intuitive datasets</li>
+        <li>Exploring impact of spending over time</li>
+        </ul>
+    </article>
+
+  <article>
+    <header><h3>References</h3></header>
+    <ul>
+      <li>1. The University of Alabama Libraries W. S. Hoole Special Collections, Early University of Alabama Administrative Records, RG 001, Acc 19801776, Box 03, Folder 90b</li>
+      <li>The dataset, figures, code, and more can be found at https://osf.io/k5bqd/</li>
+      </ul>
+  </article>
+
+  <figure style="flex-grow: 9999999">
+    <img style="width:50%; width:50%" src="./pics/Dataset.png" alt="QR Code" />
+</figure>
+    </main>
+
+    <footer>
+      <address class="monospace">  <a href="https://osf.io/k5bqd/">https://osf.io/k5bqd/</a>
+</address>
+      <address class="monospace">  dasmith27@crimson.ua.edu
+</address>
+          </footer>
+  </body>
+</html>
